@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'IndexController@index')->name('index')->fallback();
 Route::get('/account', 'IndexController@index')->name('account');
 
