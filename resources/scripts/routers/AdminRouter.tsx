@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import RolesContainer from '@/components/admin/roles/RolesContainer';
+=======
+>>>>>>> a64c0392531cdd0a94a7ddf38606470b4acd3207
 import React, { useState } from 'react';
 import { NavLink, Route, RouteComponentProps, Switch } from 'react-router-dom';
 import NotFound from '@/components/screens/NotFound';
@@ -127,10 +130,13 @@ export default ({ location, match }: RouteComponentProps) => {
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
                         <span>Users</span>
                     </NavLink>
+<<<<<<< HEAD
                     <NavLink to={`${match.url}/roles`}>
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                         <span>Roles</span>
                     </NavLink>
+=======
+>>>>>>> a64c0392531cdd0a94a7ddf38606470b4acd3207
 
                     <span>Service Management</span>
 
@@ -149,7 +155,11 @@ export default ({ location, match }: RouteComponentProps) => {
                 </NavLink>
 
                 <div className={'user'}>
+<<<<<<< HEAD
                     <img src={'https://www.gravatar.com/avatar/78a6a270ec41715a8ae96c02b8961f9e?s=64'} alt="Profile Picture" css={tw`h-10 w-10 rounded-full select-none`} />
+=======
+                    <img src={'https://cdn.krygon.app/avatars/52564280420073473/7db9f06013ec39f7fa5c1e79241c43afa1f152d82cbb193ecaab7753b9a3e61e?size=64'} alt="Profile Picture" css={tw`h-10 w-10 rounded-full select-none`} />
+>>>>>>> a64c0392531cdd0a94a7ddf38606470b4acd3207
 
                     <div css={tw`flex flex-col ml-4`}>
                         <span css={tw`font-header font-medium text-sm text-neutral-50 whitespace-no-wrap leading-tight select-none`}>Matthew Penner</span>
@@ -175,7 +185,10 @@ export default ({ location, match }: RouteComponentProps) => {
                         <Route path={`${match.path}/nodes`} component={NodesContainer}/>
                         <Route path={`${match.path}/servers`} component={ServersContainer}/>
                         <Route path={`${match.path}/users`} component={UsersContainer}/>
+<<<<<<< HEAD
                         <Route path={`${match.path}/roles`} component={RolesContainer}/>
+=======
+>>>>>>> a64c0392531cdd0a94a7ddf38606470b4acd3207
 
                         <Route path={`${match.path}/nests`} component={NestsContainer}/>
                         <Route path={`${match.path}/mounts`} component={MountsContainer}/>

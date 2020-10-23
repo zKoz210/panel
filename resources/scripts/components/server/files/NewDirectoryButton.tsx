@@ -13,6 +13,7 @@ import useFlash from '@/plugins/useFlash';
 import useFileManagerSwr from '@/plugins/useFileManagerSwr';
 import { WithClassname } from '@/components/types';
 import FlashMessageRender from '@/components/FlashMessageRender';
+import ErrorBoundary from '@/components/elements/ErrorBoundary';
 
 interface Values {
     directoryName: string;
@@ -24,7 +25,7 @@ const schema = object().shape({
 
 const generateDirectoryData = (name: string): FileObject => ({
     key: `dir_${name.split('/', 1)[0] ?? name}`,
-    name: name.split('/', 1)[0] ?? name,
+    name: name.replace(/^(\/*)/, '').split('/', 1)[0] ?? name,
     mode: '0644',
     size: 0,
     isFile: false,
@@ -88,13 +89,13 @@ export default ({ className }: WithClassname) => {
                                 name={'directoryName'}
                                 label={'Directory Name'}
                             />
-                            <p css={tw`text-xs mt-2 text-neutral-400`}>
+                            <p css={tw`text-xs mt-2 text-neutral-400 break-all`}>
                                 <span css={tw`text-neutral-200`}>This directory will be created as</span>
                                 &nbsp;/home/container/
                                 <span css={tw`text-cyan-200`}>
-                                    {decodeURIComponent(
-                                        join(directory, values.directoryName).replace(/^(\.\.\/|\/)+/, ''),
-                                    )}
+                                    {decodeURIComponent(encodeURIComponent(
+                                        join(directory, values.directoryName).replace(/^(\.\.\/|\/)+/, '')
+                                    ))}
                                 </span>
                             </p>
                             <div css={tw`flex justify-end`}>

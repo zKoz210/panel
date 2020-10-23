@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import NewApiKeyButton from '@/components/admin/api/NewApiKeyButton';
 import React, { useEffect, useState } from 'react';
 import tw from 'twin.macro';
@@ -17,6 +18,17 @@ export default () => {
             setLoading(false);
         }, 500);
     });
+=======
+import React, { useState } from 'react';
+import tw from 'twin.macro';
+import AdminContentBlock from '@/components/admin/AdminContentBlock';
+import Button from '@/components/elements/Button';
+import Spinner from '@/components/elements/Spinner';
+
+export default () => {
+    const [ loading ] = useState<boolean>(false);
+    const [ keys ] = useState<any[]>([]);
+>>>>>>> a64c0392531cdd0a94a7ddf38606470b4acd3207
 
     return (
         <AdminContentBlock>
@@ -26,14 +38,24 @@ export default () => {
                     <p css={tw`text-base text-neutral-400`}>Control access credentials for managing this Panel via the API.</p>
                 </div>
 
+<<<<<<< HEAD
                 <NewApiKeyButton />
+=======
+                <Button type={'button'} size={'large'} css={tw`h-10 ml-auto px-4 py-0`}>
+                    New API Key
+                </Button>
+>>>>>>> a64c0392531cdd0a94a7ddf38606470b4acd3207
             </div>
 
             <div css={tw`w-full flex flex-col`}>
                 <div css={tw`w-full flex flex-col bg-neutral-700 rounded-lg shadow-md`}>
                     { loading ?
                         <div css={tw`w-full flex flex-col items-center justify-center`} style={{ height: '24rem' }}>
+<<<<<<< HEAD
                             <Spinner size={'base'}/>
+=======
+                            <Spinner/>
+>>>>>>> a64c0392531cdd0a94a7ddf38606470b4acd3207
                         </div>
                         :
                         keys.length < 1 ?
