@@ -13,7 +13,6 @@ import useFlash from '@/plugins/useFlash';
 import useFileManagerSwr from '@/plugins/useFileManagerSwr';
 import { WithClassname } from '@/components/types';
 import FlashMessageRender from '@/components/FlashMessageRender';
-import ErrorBoundary from '@/components/elements/ErrorBoundary';
 
 interface Values {
     directoryName: string;
